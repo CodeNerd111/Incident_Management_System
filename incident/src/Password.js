@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
- 
-const ForgotPassword = ({ onForgotPassword }) => {
+
+const ForgotPassword = () => {
   const [email, setEmail] = useState('');
- 
+
   const handleForgotPassword = () => {
-    // Implement your forgot password logic here
-    onForgotPassword(email);
-    // Reset email input after handling forgot password
-    setEmail('');
+    alert(`Your password has been reset for email: ${email}`);
   };
- 
+
   return (
     <div>
       <h2>Forgot Password</h2>
@@ -24,5 +21,5 @@ const ForgotPassword = ({ onForgotPassword }) => {
     </div>
   );
 };
- 
+
 export default ForgotPassword;

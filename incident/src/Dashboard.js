@@ -1,20 +1,19 @@
 import React from 'react';
-//import './DashboardIncident.css';
- 
+import { Link } from 'react-router-dom';
+
 const Dashboard = () => {
   return (
-    <div className="dashboard-incident-page">
-      <h2>Dashboard Incident Page</h2>
-      {/* Your incident dashboard content goes here */}
- 
-      {/* Buttons */}
+    <div>
       <div className="buttons">
-        <button className="create-button">Create</button>
-        <button className="view-button">View</button>
-        <button className="edit-button">Edit</button>
+        <Link to="/create" className="create-button">Create</Link>
+        <Link to="/view" className="view-button">View</Link>
       </div>
     </div>
   );
-}
- 
+};
+
 export default Dashboard;
+
+
+
+

@@ -1,16 +1,18 @@
 // App.js
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import BrowserRouter and Routes
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Registration from './Registration';
 import Login from './Login';
 import Dashboard from './Dashboard';
+import Create from './Create';
+import ForgotPassword from './Password';
 
 function App() {
   const [pincodeData, setPincodeData] = useState('');
 
   return (
     <div className="App">
-      <Router> {/* Use BrowserRouter */}
+      <Router> 
         <Routes>
           <Route path='/Registration' element={<Registration
         invalidError="Please check pincode"
@@ -26,6 +28,9 @@ function App() {
       />}/>
           <Route path='/' element={<Login/>}/>
           <Route path='/dashboard' element={<Dashboard/>}/>
+          <Route path='/Password' element={<ForgotPassword/>}/>
+          <Route path='/create' element={<Create/>}/>
+          <Route path='/view' element={<Create/>}/>
         </Routes>
       </Router>
       
